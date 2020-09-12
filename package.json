@@ -1,40 +1,40 @@
 {
-	"name": "WP-Cradle-Theme",
+	"name": "wpcradletheme",
 	"version": "0.1.0",
 	"description": "A WordPress barebone starter theme. Easy Peasy.",
 	"homepage": "https://picapoint.no",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/PicapointStudio/WP-Cradle-Theme.git"
-	  },
+	},
 	"license": "MIT",
 	"author": "Picapoint",
 	"dependencies": {
-	  "normalize.css": "~8.0.1",
-	  "milligram": "~1.4.1"
+		"normalize.css": "~8.0.1",
+		"milligram": "~1.4.1"
 	},
 	"devDependencies": {
-	  "node-sass": "^4.14.1",
-	  "npm-run-all": "^4.1.5",
-	  "prettier-standard": "^16.3.0",
-	  "jshint": "^2.5.1",
-	  "uglify-js": "^3.10.4",
-	  "watch": "^1.0.2",
-	  "postcss-cli": "^7.1.1",
-	  "autoprefixer": "^9.8.0",
-	  "browserify":"^16.5.2"
+		"node-sass": "^4.14.1",
+		"npm-run-all": "^4.1.5",
+		"prettier-standard": "^16.3.0",
+		"jshint": "^2.5.1",
+		"uglify-js": "^3.10.4",
+		"watch": "^1.0.2",
+		"postcss-cli": "^7.1.1",
+		"autoprefixer": "^9.8.0",
+		"browserify": "^16.5.2",
+		"onchange": "^7.0.2"
 	},
 	"scripts": {
-	  "autoprefixer": "postcss -u autoprefixer --no-map.inline --autoprefixer.browsers \"last 1 versions\" -r assets/styles/scss/*.scss",
-	  "build": "run build:css build:js ",
-	  "build:css": "autoprefixer && node-sass --output-style compressed assets/styles/scss/style.scss assets/styles/styles.min.css && node-sass --output-style compressed assets/styles/scss/login.scss assets/styles/login.min.css",
-	  "build:js": "jshint assets/scripts/js && browserify assets/scripts/js/main.js > assets/scripts/scripts.js && uglifyjs assets/scripts/scripts.js --compress --source-map ",
-	  "start": "run build watch",
-	  "watch": "watch 'npm run build'"
+		"autoprefixer": "postcss -u autoprefixer -r assets/styles/*.css",
+		"build": "run-p --silent 'buildcss' 'buildjs' && echo 'Build done!'",
+		"buildcss": "node-sass --output-style compressed --sourceMap true --quiet assets/styles/scss/style.scss assets/styles/styles.min.css & node-sass --output-style compressed --sourceMap true --quiet assets/styles/scss/login.scss assets/styles/login.min.css && run-s autoprefixer",
+		"buildjs": "jshint assets/scripts/js && browserify assets/scripts/js/main.js > assets/scripts/scripts.js && uglifyjs assets/scripts/scripts.js --compress --output assets/scripts/scripts.min.js",
+		"start": "run-s build watch",
+		"watch": "echo 'Watching!' && onchange 'assets/styles/scss' 'assets/scripts/js' -- run-p build "
 	},
 	"prettier": {
-	  "jsxSingleQuote": false,
-	  "trailingComma": "all"
+		"jsxSingleQuote": false,
+		"trailingComma": "all"
 	}
-  }
-  
+}
