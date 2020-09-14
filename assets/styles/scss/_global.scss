@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+// Site header
+.site-header {
+
+	@media (min-width:640px) {
+		padding: 1.6rem 0;
+	}
+	.site-logo {
+		padding: 1.6rem 0;
+    	display: inline-block;
+	}
+	
+	.hamburger {
+		float:right;
+		margin-right: -1rem;
+	}
+
+	@media (min-width:640px) {
+		.hamburger {
+			display:none;
+		}
+		#main-nav {
+			display: block;
+		}
+	}
+}

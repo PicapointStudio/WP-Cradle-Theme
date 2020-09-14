@@ -32,11 +32,20 @@
 			
 	<body <?php body_class(); ?>>
 				
-		<header class="header" role="banner">
+		<header class="header site-header" role="banner">
 			<div class="container">
 				<div class="row">
-					<div class="column"><a href="<?php echo home_url(); ?>" title="" class="site-logo">Logo</a></div>
-					<div class="column"><?php cradle_top_nav(); ?></div>
+					<div class="column">
+						<a href="<?php echo home_url(); ?>" title="" class="site-logo">Logo</a>
+						<div class="hamburger hamburger--collapse" aria-label="<?php _e('Toggle menu visibility', 'wpcradle'); ?>">
+							<div class="hamburger-box">
+							<div class="hamburger-inner"></div>
+							</div>
+						</div>
+					</div>
+					<div class="column">
+						<?php cradle_top_nav(); ?>
+					</div>
 				</div>
 			</div>
 		</header> <!-- end .header -->
