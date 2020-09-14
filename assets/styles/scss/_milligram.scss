@@ -435,12 +435,12 @@ input[type='radio'] {
   
     .row {
       flex-direction: row;
-      margin-left: -1rem;
-      width: calc(100% + 2rem);
+      margin-left: -1.6rem;
+      width: calc(100% + 3.2rem);
   
       .column {
         margin-bottom: inherit;
-        padding: 0 1rem;
+        padding: 0 1.6rem;
       }
     }
   }
@@ -609,6 +609,7 @@ h6 {
 
 img {
     max-width: 100%;
+    height: auto;
   }
 
 // Utility
