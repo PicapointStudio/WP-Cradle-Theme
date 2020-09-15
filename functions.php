@@ -26,7 +26,7 @@ require_once(get_template_directory().'/functions/comments.php');
 require_once(get_template_directory().'/functions/page-navi.php'); 
 
 // Adds support for multiple languages
-require_once(get_template_directory().'/functions/translation/translation.php'); 
+require_once(get_template_directory().'/functions/translations/translation.php'); 
 
 // Customize the WordPress login menu
 require_once(get_template_directory().'/functions/login.php');
