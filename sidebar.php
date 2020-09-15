@@ -4,7 +4,7 @@
  */
  ?>
 
-<div id="sidebar1" class="sidebar column column-25 cell" role="complementary">
+<div id="sidebar1" class="sidebar column medium-column-25 cell" role="complementary">
 
 	<?php if ( is_active_sidebar( 'sidebar1' ) ) : ?>
 

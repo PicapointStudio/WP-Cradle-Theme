@@ -10,7 +10,7 @@ register_nav_menus(
 function cradle_top_nav() {
 	wp_nav_menu(array(
 		'container'			=> true,						
-		'menu_id'			=> 'main-nav',					
+		'menu_id'			=> 'main_nav',					
 		'menu_class'		=> 'menu right-aligned',							
 		'items_wrap'		=> '<nav id="%1$s"><ul class="%2$s">%3$s</ul></nav>',
 		'theme_location'	=> 'main-nav',					

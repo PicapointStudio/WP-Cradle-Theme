@@ -11,7 +11,7 @@ get_header(); ?>
 
 		<div class="row">
 		
-		    <main class="column column-75" role="main">
+		    <main class="column medium-column-75" role="main">
 				
 				<?php the_breadcrumbs(); ?>
 

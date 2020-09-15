@@ -9,7 +9,7 @@ get_header(); ?>
 
 		<div class="row">
 	
-		    <main class="main column column-75">
+		    <main class="main column medium-column-75">
 
 				<header class="site-title" >
 					<h1><?php echo get_bloginfo('name'); ?></h1>	

@@ -247,7 +247,7 @@ input[type='radio'] {
 // .container is main centered wrapper with a max width of 112.0rem (1120px)
 .container {
     margin: 0 auto;
-    max-width: 112rem;
+    max-width: $grid-width;
     padding: 0 2rem;
     position: relative;
     width: 100%;
@@ -413,6 +413,69 @@ input[type='radio'] {
         flex: 0 0 90%;
         max-width: 90%;
       }
+
+      @media (min-width:$small) {
+              // Explicit Column Percent Sizes For medium and up sizes
+              // By default each grid column will evenly distribute
+              // across the grid. However, you can specify individual
+              // columns to take up a certain size of the available area
+              &.medium-column-10 {
+                flex: 0 0 10%;
+                max-width: 10%;
+              }
+          
+              &.medium-column-20 {
+                flex: 0 0 20%;
+                max-width: 20%;
+              }
+          
+              &.medium-column-25 {
+                flex: 0 0 25%;
+                max-width: 25%;
+              }
+          
+              &.medium-column-33,
+              &.medium-column-34 {
+                flex: 0 0 33.3333%;
+                max-width: 33.3333%;
+              }
+          
+              &.medium-column-40 {
+                flex: 0 0 40%;
+                max-width: 40%;
+              }
+          
+              &.medium-column-50 {
+                flex: 0 0 50%;
+                max-width: 50%;
+              }
+          
+              &.medium-column-60 {
+                flex: 0 0 60%;
+                max-width: 60%;
+              }
+          
+              &.medium-column-66,
+              &.medium-column-67 {
+                flex: 0 0 66.6666%;
+                max-width: 66.6666%;
+              }
+          
+              &.medium-column-75 {
+                flex: 0 0 75%;
+                max-width: 75%;
+              }
+          
+              &.medium-column-80 {
+                flex: 0 0 80%;
+                max-width: 80%;
+              }
+          
+              &.medium-column-90 {
+                flex: 0 0 90%;
+                max-width: 90%;
+              }
+      }
   
       // .column-* vertically aligns an individual .column
       .column-top {
@@ -430,7 +493,7 @@ input[type='radio'] {
   }
   
   // Larger than mobile screen
-  @media (min-width: 40rem) {
+  @media (min-width: $small) {
     // Safari desktop has a bug using `rem`, but Safari mobile works
   
     .row {
@@ -539,7 +602,7 @@ table {
     }
   }
   
-  @media (min-width: 40rem) {
+  @media (min-width: $small) {
     table {
       display: table;
       overflow-x: initial;

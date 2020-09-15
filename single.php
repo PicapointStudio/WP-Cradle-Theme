@@ -9,7 +9,7 @@ get_header(); ?>
 	
 	<div class="row">
 
-		<main class="main column column-75" role="main">
+		<main class="main column medium-column-75" role="main">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
