@@ -1,0 +1,51 @@
+// Vertical and horizontal menus, made with ul. Horizontal by default
+
+ul.menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+
+	&.vertical {
+		flex-direction:column;
+		li:first-child a, li:last-child a {
+			margin: 0;
+		}
+		&.right-aligned {
+			align-items: flex-end;
+		}
+		&.center-aligned {
+			align-items: center;
+		}
+	}
+
+	&.right-aligned {
+		justify-content: flex-end;
+
+		li:last-child a {
+			margin-right: -1.6rem;
+		}
+
+	}
+
+	&.center-aligned {
+		justify-content: center;
+
+		li:first-child a, li:last-child a {
+			margin: 0;
+		}
+	}
+
+	li:first-child a {
+		margin-left: -1.6rem;
+	}
+
+	li {
+		margin-bottom: 0;
+	}
+
+	li a {
+		padding: 1.2rem 1.6rem;
+	}
+	
+}
