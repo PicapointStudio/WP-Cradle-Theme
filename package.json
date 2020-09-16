@@ -36,5 +36,8 @@
 	"prettier": {
 		"jsxSingleQuote": false,
 		"trailingComma": "all"
+	},
+	"jshintConfig": {
+		"esversion":6
 	}
 }

@@ -21,4 +21,4 @@ All styles are located in assets/styles. In the scss-folder place your styles, a
 The base font-size is set at 62.5% for having the convenience of sizing rems in a way that is similar to using px: 1.6rem = 16px
 
 ### Thanks to
-This theme is based on [JointsWP](https://github.com/JeremyEnglert/JointsWP), [Milligram scss](https://github.com/milligram/milligram-scss) and [Foundation sites](https://github.com/foundation/foundation-sites) .
+This theme is based and inspried by components and code from [JointsWP](https://github.com/JeremyEnglert/JointsWP), [Milligram scss](https://github.com/milligram/milligram-scss), [Foundation sites](https://github.com/foundation/foundation-sites) and [AOS](https://github.com/michalsnik/aos).
