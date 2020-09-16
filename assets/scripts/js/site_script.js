@@ -1,5 +1,6 @@
 //Start your javascript journey here
 
+//Mobile menu
 var toggleMobileMenu = document.getElementById('toggle_mobile_menu');
 var mainNav = document.getElementById('main_nav');
 var siteHeader = document.getElementById('site_header');
