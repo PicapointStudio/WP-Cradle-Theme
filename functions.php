@@ -36,3 +36,6 @@ require_once(get_template_directory().'/functions/admin.php');
 
 // Breadcrumbs
 require_once(get_template_directory().'/functions/breadcrumbs.php'); 
+
+// WordPress helpers
+require_once(get_template_directory().'/functions/helpers.php');
