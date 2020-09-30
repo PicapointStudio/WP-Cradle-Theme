@@ -55,7 +55,7 @@
 		
 		@media (min-width:$small) {
 			position: relative;
-			top: auto;
+			top: calc(50% - .8rem);
 			right: auto;
 			background: none;
 			width: auto;
