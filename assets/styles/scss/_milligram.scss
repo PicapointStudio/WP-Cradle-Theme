@@ -680,19 +680,26 @@ img {
 
 // Clear a float with .clearfix
 .clearfix {
-    &:after {
-      clear: both;
-      content: ' '; // The space content is one way to avoid an Opera bug.
-      display: table;
-    }
+  &:after {
+    clear: both;
+    content: ' '; // The space content is one way to avoid an Opera bug.
+    display: table;
   }
+}
+
+// Float either direction
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
   
-  // Float either direction
-  .float-left {
-    float: left;
+// Responsive GRID fix - Added by Martin Singstad, made by Lilja/promatik at Github (https://github.com/milligram/milligram/issues/144)
+@media (max-width: $small) {
+  .row .column.responsive[class*=" column-"] {
+    margin-left: 0;
+    max-width: 100%;
   }
-  
-  .float-right {
-    float: right;
-  }
-  
+}
