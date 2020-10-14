@@ -1,0 +1,12 @@
+// Site header Sticky
+.header--sticky {
+	background: $color-initial;
+    left: 0;
+    max-height: 7.2rem;
+    max-width: 100%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
