@@ -43,7 +43,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="column">
+					<div class="column medium-column-75">
 						<?php cradle_top_nav(); ?>
 					</div>
 				</div>
