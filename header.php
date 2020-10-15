@@ -33,5 +33,5 @@
 	<body <?php body_class(); ?>>
     
 	<?php 
-	//Avaiable header templates: header-dynamic, header-sticky
-	get_template_part('parts', 'header-dynamic'); ?>
+	//Avaiable header templates: dynamic, sticky
+	get_template_part('parts/header', 'dynamic'); ?>
