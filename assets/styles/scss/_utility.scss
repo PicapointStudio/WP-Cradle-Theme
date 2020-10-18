@@ -1,10 +1,10 @@
 $screen-breakpoints: (
-  xs: $xsmall,
-  sm: $small,
-  md: $medium,
-  lg: $large,
-  xl: $xlarge,
-  xxl: $xxlarge
+  xtrasmall: $xsmall,
+  small: $small,
+  medium: $medium,
+  large: $large,
+  xlarge: $xlarge,
+  xxlarge: $xxlarge
 );
 $browser-context: 10px;
 
@@ -22,21 +22,37 @@ $breakpoints-values: map-values($screen-breakpoints);
         display: none;
       }
     }
-    .show-only-#{nth($breakpoints-keys, $i)} {
+    .show-#{nth($breakpoints-keys, $i)}-only {
         @media (max-width: em(nth($breakpoints-values, 1))) and (min-width: em(nth($breakpoints-values, $i))) {
           display: none;
         }
         @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
-            display: block;
+            display: inherit;
         }
         @media (min-width: em(nth($breakpoints-values, $i+1))) and (max-width: em(nth($breakpoints-values, 6))) {
             display: none;
         }
       }
-    .hidden-#{nth($breakpoints-keys, $i)} {
+    .hide-for-#{nth($breakpoints-keys, $i)}-only {
       @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
         display: none !important;
       }
+    }
+    .hide-for-#{nth($breakpoints-keys, $i)}-only {
+        @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
+          display: none !important;
+        }
+    }
+    .hide-for-#{nth($breakpoints-keys, $i)} {
+        @media (max-width: em(nth($breakpoints-values, 1))) and (min-width: em(nth($breakpoints-values, $i))) {
+          display: inherit;
+        }
+        @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
+            display: none;
+        }
+        @media (min-width: em(nth($breakpoints-values, $i+1))) and (max-width: em(nth($breakpoints-values, 6))) {
+            display: inherit;
+        }
     }
   }
 }
