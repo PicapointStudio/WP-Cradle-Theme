@@ -38,20 +38,12 @@ $breakpoints-values: map-values($screen-breakpoints);
         display: none !important;
       }
     }
-    .hide-for-#{nth($breakpoints-keys, $i)}-only {
-        @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
-          display: none !important;
-        }
-    }
     .hide-for-#{nth($breakpoints-keys, $i)} {
         @media (max-width: em(nth($breakpoints-values, 1))) and (min-width: em(nth($breakpoints-values, $i))) {
           display: inherit;
         }
-        @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, $i+1))) {
+        @media (min-width: em(nth($breakpoints-values, $i))) and (max-width: em(nth($breakpoints-values, 6))) {
             display: none;
-        }
-        @media (min-width: em(nth($breakpoints-values, $i+1))) and (max-width: em(nth($breakpoints-values, 6))) {
-            display: inherit;
         }
     }
   }
